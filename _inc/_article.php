@@ -2,19 +2,20 @@
 
 <div class="row">
 	<?php 
-		$sorgu=$ifo->sec('u.adi,i.baslik,i.link,i.tarih,i.giris,i.metin','yazilar AS i,uyeler AS u','i.uid=u.id AND i.onay=1 AND i.ana=1','i.id DESC',$ayarlar['say'])->oku(false);
+		$sorgu=$ifo->sec('y.baslik,y.metin,y.tarih,y.adsoyad,y.link','yorumlar AS y',' y.onay=1 AND y.ana=1')->oku(false);
+		
 		
 		$sutun=ceil(12/$ayarlar['sutun']);
-		foreach($sorgu as $haber){
+		foreach($sorgu as $yorum){
 	?>
   <div class="col-md-<?=$sutun;?>">
-    <h3><a href="<?=$haber['link'];?>"><?=$haber['baslik'];?></a></h3>
+    <h3><a href="<?=$yorum['link'];?>"><?=$yorum['baslik'];?></a></h3>
     <p class="text-danger"><i class="fa fa-clock-o"></i> 
-   <?=$ifo::tarih($haber['tarih']);?> <i class="fa fa-user"></i> <?=$haber['adi'];?></p>
-    <p><?=$haber['giris'];?></p>
+   <?=$ifo::tarih($yorum['tarih']);?> <i class="fa fa-user"></i> <?=$yorum['adsoyad'];?></p>
+    <p><?=$yorum['baslik'];?></p>
     
-	<?php if($haber['metin']){?>
-    <p class="pull-right"><a class="btn btn-default" href="<?=$haber['link'];?>"> Devamı <i class="fa fa-angle-right"></i> </a> </p>
+	<?php if($yorum['metin']){?>
+    <p class="pull-right"><a class="btn btn-default" href="<?=$yorum['link'];?>"> Devamı <i class="fa fa-angle-right"></i> </a> </p>
     <?php }//if?>
   </div>
   <?php }//while ?>

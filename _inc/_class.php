@@ -2,4 +2,5 @@
 <?php 
 	require_once('_class/_phpmailer.php');
 	require_once('_class/_ifo.php');
+	require_once('_class/_dosyaykl.php');
 ?>

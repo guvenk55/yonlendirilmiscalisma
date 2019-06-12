@@ -19,6 +19,7 @@
   <?php require('_sayfa.php'); ?>
   
   <footer class="row text-center" style="margin:0px;">
+  
   <?php require('_inc/_alt.php'); ?>
   </footer>
 </section>

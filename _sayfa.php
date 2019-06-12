@@ -27,10 +27,16 @@
 		case '_yorumlar':$url='_sayfalar/_yorumlar.php';break;
 		case '_dvmednprj':$url='_sayfalar/devamedenprojeler.php';break;
 		case '_tmprj':$url='_sayfalar/tamamlananprojeler.php';break;
-
+		case '_uyeduzenle':$url='_sayfalar/_admin/_uyedznl.php';break;
+		case '_projeler':$url='_sayfalar/_admin/_projeler.php';break;
+		case '_proje-ekle':$url='_sayfalar/_admin/_proje_ekle.php';break;
+		case '_projegncl':$url='_sayfalar/_admin/_projegncl.php';break;
+		case '_kullanılanmlzm':$url='_sayfalar/_admin/_kullanılanmlzm.php';break;
+		case '_kullanılanmlzmgncl':$url='_sayfalar/_admin/_kullanılanmalzemegncl.php';break;
+		case '_kullanılanmlzmekle':$url='_sayfalar/_admin/_kullanılanmalzemekle.php';break;
+		case '_hakkimda':$url='_sayfalar/_hakkimizda.php';break;
 		default:$url='_sayfalar/_icerik.php';break;
 	}
-
 	@include($url);
 
 ?>

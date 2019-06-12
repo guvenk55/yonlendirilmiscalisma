@@ -2,7 +2,7 @@
 
 <?php
 	$id = ifo::kontrol($link, 'string');
-	$article = $ifo->sec('y.*, u.adi', 'yazilar AS y JOIN uyeler AS u ON u.id = y.uid', "link={$id}")->oku();
+	$article = $ifo->sec('y.*, u.adi', 'yorumlar AS y JOIN uyeler AS u ON u.id = y.uid', "link={$id}")->oku();
 ?>
 
 <section id="icerik" class="buyuk">
